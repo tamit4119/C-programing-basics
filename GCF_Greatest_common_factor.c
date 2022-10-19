@@ -1,17 +1,26 @@
-#include<stdio.h>
-int main (){
-	int n,m,p,i,h;
-	printf("Enter 1st Number : ");
-	scanf("%d",&n);                             //input
-	printf("Enter 2nd Number : ");
-	scanf("%d",&m);
-	
-	p=(n>m)?n:m;
-	for(i=1;i<=p;i++){                          //execution
-		if(n%i==0 && m%i==0){
-			h=i;
-		}
+// C program to find GCD of two numbers
+#include <math.h>
+#include <stdio.h>
+ 
+// Function to return gcd of a and b
+int gcd(int a, int b)
+{
+    // Find Minimum of a and b
+    int result = ((a < b) ? a : b);
+    while (result > 0) {
+        if (a % result == 0 && b % result == 0) {
+            break;
+        }
+        result--;
     }
-	printf("Greatest Common Fcator is : %d",h);
-   return 0 ;
+    return result; // return gcd of a nd b
 }
+ 
+// Driver program to test above function
+int main()
+{
+    int a = 98, b = 56;
+    printf("GCD of %d and %d is %d ", a, b, gcd(a, b));
+    return 0;
+}
+// This code is contributed by riyazmd786
