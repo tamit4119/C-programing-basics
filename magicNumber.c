@@ -23,7 +23,8 @@ int main(){
   //Multiple sum with its reverse
   mn=sum*rev;
   if(mn==n)
-    printf("%d is a Magic Number\n");
+    printf("%d is a Magic Number\n",n);
   else
-    printf("%d is not a Magic Number\n");
+    printf("%d is not a Magic Number\n",n);
+  return 0;
 }
